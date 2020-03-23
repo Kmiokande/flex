@@ -1,7 +1,6 @@
 package com.goblintechs.flex_gasolinaouetanol
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,11 +14,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
 
         btCalculate.setOnClickListener {
-            calcular()
+            calculate()
         }
     }
 
-    fun calcular() {
+    private fun calculate() {
         val duration = Toast.LENGTH_SHORT
         if (etAlcoholConsumption.text.isEmpty()) {
             Toast.makeText(this, R.string.alcohol_consum_error, duration).show()
@@ -39,11 +38,11 @@ class MainActivity : AppCompatActivity() {
             val precoAlcool = etAlcoholPrice.text.toString()
             val precoGasolina = etGasolinePrice.text.toString()
 
-            calcularMelhorPreco(consumoAlcool, consumoGasolina, precoAlcool, precoGasolina)
+            calculateBetterPrice(consumoAlcool, consumoGasolina, precoAlcool, precoGasolina)
         }
     }
 
-    fun calcularMelhorPreco(
+    private fun calculateBetterPrice(
         consumoAlcool: String,
         consumoGasolina: String,
         precoAlcool: String,
@@ -73,13 +72,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun sair() {
+    private fun exit() {
         AlertDialog.Builder(this).setMessage(R.string.exit_question).setCancelable(false)
             .setPositiveButton(R.string.text_yes) { dialog, id -> finish() }
             .setNegativeButton(R.string.text_cancel, null).show()
     }
 
     override fun onBackPressed() {
-        sair()
+        exit()
     }
 }
