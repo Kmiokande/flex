@@ -12,4 +12,10 @@
     <string name="gasoline_consum_error">Preencha o valor de consumo por litro de Gasolina!</string>
     <string name="alcohol_price_error">Preencha o preço do litro do Álcool!</string>
     <string name="gasoline_price_error">Preencha o preço do litro da Gasolina!</string>
+
+    <!-- Alerts Dialogs -->
+    <string name="text_yes">Sim</string>
+    <string name="text_no">Não</string>
+    <string name="text_cancel">Cancelar</string>
+    <string name="exit_question">Deseja realmente sair?</string>
 </resources>

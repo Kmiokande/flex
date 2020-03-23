@@ -1,9 +1,12 @@
 package com.goblintechs.flex_gasolinaouetanol
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.main_activity.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,5 +71,15 @@ class MainActivity : AppCompatActivity() {
         else {
             tvResult.setText("Abasteça com Gasolina!")
         }
+    }
+
+    fun sair() {
+        AlertDialog.Builder(this).setMessage(R.string.exit_question).setCancelable(false)
+            .setPositiveButton(R.string.text_yes) { dialog, id -> finish() }
+            .setNegativeButton(R.string.text_cancel, null).show()
+    }
+
+    override fun onBackPressed() {
+        sair()
     }
 }
