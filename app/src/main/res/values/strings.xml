@@ -5,7 +5,7 @@
     <string name="mileage_consumption">Consumo por quilometragem</string>
     <string name="price">Preço</string>
     <string name="calculate">Calcular</string>
-    <string name="frase">Saiba a melhor opção para abastecer o seu carro.</string>
+    <string name="result">Resultado</string>
 
     <!-- Toast Messages -->
     <string name="alcohol_consum_error">Preencha o valor do consumo de etanol por quilometragem!</string>

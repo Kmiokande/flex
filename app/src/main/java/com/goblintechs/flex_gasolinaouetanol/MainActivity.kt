@@ -2,6 +2,7 @@ package com.goblintechs.flex_gasolinaouetanol
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.main_activity.*
@@ -65,9 +66,11 @@ class MainActivity : AppCompatActivity() {
         val resultado = rendimento * valorGasolina
 
         if (resultado >= valorAlcool) {
+            tvResult.visibility = View.VISIBLE
             tvResult.setText("Abasteça com Álcool!")
         }
         else {
+            tvResult.visibility = View.VISIBLE
             tvResult.setText("Abasteça com Gasolina!")
         }
     }

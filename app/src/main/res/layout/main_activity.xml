@@ -114,10 +114,12 @@
         android:background="@drawable/result_background"
         android:gravity="center"
         android:padding="5dp"
-        android:text="TextView"
+        android:text="@string/result"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btCalculate" />
