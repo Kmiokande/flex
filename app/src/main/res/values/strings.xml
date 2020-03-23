@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Flex - Gasolina ou Etanol</string>
-    <string name="alcohol_consumption">Consumo de etanol por quilometragem</string>
-    <string name="gasoline_consumption">Consumo de gasolina por quilometragem</string>
-    <string name="alcohol_price">Preço do etanol</string>
-    <string name="gasoline_price">Preço da gasolina</string>
+    <string name="etanol">Etanol</string>
+    <string name="gasolina">Gasolina</string>
+    <string name="mileage_consumption">Consumo por quilometragem</string>
+    <string name="price">Preço</string>
     <string name="calculate">Calcular</string>
     <string name="frase">Saiba a melhor opção para abastecer o seu carro.</string>
 
