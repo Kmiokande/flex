@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Flex - Gasolina ou Etanol</string>
+    <string name="alcohol_consumption">Consumo de Álcool por litro</string>
+    <string name="gasoline_consumption">Consumo de Gasolina por litro</string>
+    <string name="alcohol_price">Preço do Álcool</string>
+    <string name="gasoline_price">Preço da Gasolina</string>
+    <string name="calculate">Calcular</string>
+    <string name="frase">Saiba a melhor opção para abastecer o seu carro.</string>
 </resources>
