@@ -2,6 +2,7 @@ package com.goblintechs.flex_gasolinaouetanol
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,12 +17,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun calcular() {
-        val consumoAlcool = etAlcoholConsumption.text.toString()
-        val consumoGasolina = etGasolineConsumption.text.toString()
-        val precoAlcool = etAlcoholPrice.text.toString()
-        val precoGasolina = etGasolinePrice.text.toString()
+        val duration = Toast.LENGTH_SHORT
+        if (etAlcoholConsumption.text.isEmpty()) {
+            Toast.makeText(this, R.string.alcohol_consum_error, duration).show()
+        }
+        else if (etGasolineConsumption.text.isEmpty()) {
+            Toast.makeText(this, R.string.gasoline_consum_error, duration).show()
+        }
+        else if (etAlcoholPrice.text.isEmpty()) {
+            Toast.makeText(this, R.string.alcohol_price_error, duration).show()
+        }
+        else if (etGasolinePrice.text.isEmpty()) {
+            Toast.makeText(this, R.string.gasoline_price_error, duration).show()
+        }
+        else {
+            val consumoAlcool = etAlcoholConsumption.text.toString()
+            val consumoGasolina = etGasolineConsumption.text.toString()
+            val precoAlcool = etAlcoholPrice.text.toString()
+            val precoGasolina = etGasolinePrice.text.toString()
 
-        calcularMelhorPreco(consumoAlcool, consumoGasolina, precoAlcool, precoGasolina)
+            calcularMelhorPreco(consumoAlcool, consumoGasolina, precoAlcool, precoGasolina)
+        }
     }
 
     fun calcularMelhorPreco(
