@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun exit() {
         AlertDialog.Builder(this).setMessage(R.string.exit_question).setCancelable(false)
-            .setPositiveButton(R.string.text_yes) { dialog, id -> finish() }
+            .setPositiveButton(R.string.text_yes) { _, _ -> finish() }
             .setNegativeButton(R.string.text_cancel, null).show()
     }
 

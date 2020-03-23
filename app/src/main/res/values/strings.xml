@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">Flex - Gasolina ou Etanol</string>
-    <string name="alcohol_consumption">Consumo de Álcool por litro</string>
-    <string name="gasoline_consumption">Consumo de Gasolina por litro</string>
-    <string name="alcohol_price">Preço do Álcool</string>
-    <string name="gasoline_price">Preço da Gasolina</string>
+    <string name="alcohol_consumption">Consumo de etanol por quilometragem</string>
+    <string name="gasoline_consumption">Consumo de gasolina por quilometragem</string>
+    <string name="alcohol_price">Preço do etanol</string>
+    <string name="gasoline_price">Preço da gasolina</string>
     <string name="calculate">Calcular</string>
     <string name="frase">Saiba a melhor opção para abastecer o seu carro.</string>
 
     <!-- Toast Messages -->
-    <string name="alcohol_consum_error">Preencha o valor de consumo por litro de Álcool!</string>
-    <string name="gasoline_consum_error">Preencha o valor de consumo por litro de Gasolina!</string>
-    <string name="alcohol_price_error">Preencha o preço do litro do Álcool!</string>
-    <string name="gasoline_price_error">Preencha o preço do litro da Gasolina!</string>
+    <string name="alcohol_consum_error">Preencha o valor do consumo de etanol por quilometragem!</string>
+    <string name="gasoline_consum_error">Preencha o valor do consumo de gasolina por quilometragem!</string>
+    <string name="alcohol_price_error">Preencha o preço do litro do etanol!</string>
+    <string name="gasoline_price_error">Preencha o preço do litro da gasolina!</string>
 
     <!-- Alerts Dialogs -->
     <string name="text_yes">Sim</string>
