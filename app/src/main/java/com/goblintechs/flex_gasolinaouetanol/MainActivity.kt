@@ -1,6 +1,8 @@
 package com.goblintechs.flex_gasolinaouetanol
 
 import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -30,7 +32,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle presses on the action bar menu items
         when (item.itemId) {
-            R.id.action_exit -> {
+            R.id.action_calc_consumption_menu -> {
+                howCalculate()
+                return true
+            }
+            R.id.action_exit_menu -> {
                 finish()
                 return true
             }
@@ -92,6 +98,17 @@ class MainActivity : AppCompatActivity() {
             tvResult.visibility = View.VISIBLE
             tvResult.setText("Abasteça com Gasolina!")
         }
+    }
+
+    private fun howCalculate() {
+        val alertDialog = AlertDialog.Builder(this, R.style.AlertDialogTheme).create()
+        alertDialog.setTitle(getString(R.string.how_calc_consumption))
+        alertDialog.setMessage(getString(R.string.how_calc_consumption_info))
+        alertDialog.setButton(
+            Dialog.BUTTON_POSITIVE,
+            getString(R.string.text_ok)) {dialogInterface: DialogInterface?, which: Int ->  }
+        //alertDialog.setIcon()
+        alertDialog.show()
     }
 
     private fun exit() {

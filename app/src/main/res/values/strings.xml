@@ -16,9 +16,27 @@
     <!-- Alerts Dialogs -->
     <string name="text_yes">Sim</string>
     <string name="text_no">Não</string>
+    <string name="text_ok">OK</string>
     <string name="text_cancel">Cancelar</string>
     <string name="exit_question">Deseja realmente sair?</string>
+    <string name="how_calc_consumption">Como calcular o consumo de combustível?</string>
+    <string name="how_calc_consumption_info">O primeiro passo para descobrir o quanto seu carro
+        gasta é abastecer o tanque. Com o tanque cheio, zere o hodômetro parcial,
+        localizado no painel. Use o carro normalmente e no próximo abastecimento confira na bomba
+        do posto a quantidade exata de litros que entrou no carro. Para calcular a média
+        em quilômetros por litro, basta dividir os quilômetros percorridos pela quantidade
+        de litros que a bomba marca no segundo abastecimento. Por exemplo, se você rodou 450
+        quilômetros e no abastecimento precisou colocar 32 litros para completar o tanque,
+        a média será de 14,06 (450 dividido por 32).
+        \n\nO consumo pode variar em trechos urbanos e de estrada. O modo como o motorista conduz
+        o veículo também pode ser um diferencial. Para conseguir melhores marcas, evite trocar de
+        marcha com o giro muito alto e acelerar o carro enquanto o mesmo estiver parado.
+        \n\nÉ importante ficar atento a um detalhe.
+        \nAo abastecer o carro para fazer a conta, fique atento ao “clique” da bomba de combustível.
+        Ela indica que o tanque já está cheio. Não deixe que o frentista encha o tanque até a
+        boca no modo manual.</string>
 
     <!-- Menu -->
+    <string name="calc_consumption">Como calcular o consumo?</string>
     <string name="exit">Sair</string>
 </resources>
