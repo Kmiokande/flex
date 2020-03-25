@@ -3,8 +3,8 @@ package com.goblintechs.flex_gasolinaouetanol
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.main_activity.*
 
 
@@ -20,38 +20,38 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculate() {
-        val duration = Toast.LENGTH_SHORT
-        if (etAlcoholConsumption.text.isEmpty()) {
-            Toast.makeText(this, R.string.alcohol_consum_error, duration).show()
+        val duration = Snackbar.LENGTH_LONG
+        if (etEthanolConsumption.text.isEmpty()) {
+            Snackbar.make(mainActivityLayout, R.string.alcohol_consum_error, duration).show()
+        }
+        else if (etEthanolPrice.text.isEmpty()) {
+            Snackbar.make(mainActivityLayout, R.string.alcohol_price_error, duration).show()
         }
         else if (etGasolineConsumption.text.isEmpty()) {
-            Toast.makeText(this, R.string.gasoline_consum_error, duration).show()
-        }
-        else if (etAlcoholPrice.text.isEmpty()) {
-            Toast.makeText(this, R.string.alcohol_price_error, duration).show()
+            Snackbar.make(mainActivityLayout, R.string.gasoline_consum_error, duration).show()
         }
         else if (etGasolinePrice.text.isEmpty()) {
-            Toast.makeText(this, R.string.gasoline_price_error, duration).show()
+            Snackbar.make(mainActivityLayout, R.string.gasoline_price_error, duration).show()
         }
         else {
-            val consumoAlcool = etAlcoholConsumption.text.toString()
-            val consumoGasolina = etGasolineConsumption.text.toString()
-            val precoAlcool = etAlcoholPrice.text.toString()
-            val precoGasolina = etGasolinePrice.text.toString()
+            val ethanolConsumption = etEthanolConsumption.text.toString()
+            val gasolineConsumption = etGasolineConsumption.text.toString()
+            val ethanolPrice = etEthanolPrice.text.toString()
+            val gasolinePrice = etGasolinePrice.text.toString()
 
-            calculateBetterPrice(consumoAlcool, consumoGasolina, precoAlcool, precoGasolina)
+            calculateBetterPrice(ethanolConsumption, gasolineConsumption, ethanolPrice, gasolinePrice)
         }
     }
 
     private fun calculateBetterPrice(
-        consumoAlcool: String,
-        consumoGasolina: String,
-        precoAlcool: String,
-        precoGasolina: String) {
-        val consumoLitroAlcool = consumoAlcool.toDouble()
-        val consumoLitroGasolina = consumoGasolina.toDouble()
-        val valorAlcool = precoAlcool.toDouble()
-        val valorGasolina = precoGasolina.toDouble()
+        ethanolConsumption: String,
+        gasolineConsumption: String,
+        ethanolPrice: String,
+        gasolinePrice: String) {
+        val consumoLitroAlcool = ethanolConsumption.toDouble()
+        val consumoLitroGasolina = gasolineConsumption.toDouble()
+        val valorAlcool = ethanolPrice.toDouble()
+        val valorGasolina = gasolinePrice.toDouble()
 
         /*
         1- Divida o desempenho do etanol pelo desempenho da gasolina (se seu carro faz 7,3 km/litro
@@ -62,10 +62,10 @@ class MainActivity : AppCompatActivity() {
         4- Caso contrário, abasteça com gasolina.
         */
 
-        val rendimento = consumoLitroAlcool / consumoLitroGasolina
-        val resultado = rendimento * valorGasolina
+        val efficiency = consumoLitroAlcool / consumoLitroGasolina
+        val result = efficiency * valorGasolina
 
-        if (resultado >= valorAlcool) {
+        if (result >= valorAlcool) {
             tvResult.visibility = View.VISIBLE
             tvResult.setText("Abasteça com Álcool!")
         }
