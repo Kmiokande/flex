@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- menu color -->
+        <item name="android:textColor">#FFF</item>
+        <item name="android:itemBackground">@color/colorPrimaryDark</item>
     </style>
 
     <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
@@ -13,12 +16,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
-    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">>
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textColorPrimary">#FFF</item>
         <item name="colorAccent">#FF1493</item>
-
     </style>
 
 </resources>

@@ -95,7 +95,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun exit() {
-        AlertDialog.Builder(this, R.style.AlertDialogTheme).setMessage(R.string.exit_question).setCancelable(false)
+        AlertDialog.Builder(this, R.style.AlertDialogTheme)
+            .setMessage(R.string.exit_question).setCancelable(false)
             .setPositiveButton(R.string.text_yes) { _, _ -> finish() }
             .setNegativeButton(R.string.text_cancel, null).show()
     }
