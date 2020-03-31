@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar">
@@ -21,8 +25,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

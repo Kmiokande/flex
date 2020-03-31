@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "238637801068",
+    "firebase_url": "https://flex-gasolina-ou-etanol.firebaseio.com",
+    "project_id": "flex-gasolina-ou-etanol",
+    "storage_bucket": "flex-gasolina-ou-etanol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238637801068:android:9913ea77cfcd942aec4249",
+        "android_client_info": {
+          "package_name": "com.goblintechs.flex_gasolinaouetanol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238637801068-6p9u5eq6nt32ed7do9fsuv1f9sp192f9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goblintechs.flex_gasolinaouetanol",
+            "certificate_hash": "a7a8a5d5a78c4c49c56215b031db58aeb306afc8"
+          }
+        },
+        {
+          "client_id": "238637801068-4k93d5o16qs2tp50nq1oigfa2ds4iqd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJi9TEGTgq2P8s5h1b_Nv3p1rtR02Xm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238637801068-4k93d5o16qs2tp50nq1oigfa2ds4iqd2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
