@@ -3,12 +3,14 @@ package com.goblintechs.flex_gasolinaouetanol
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.main_activity.*
 
 
@@ -37,6 +39,9 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.action_exit_menu -> {
+                FirebaseAuth.getInstance().signOut()
+                val i = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(i)
                 finish()
                 return true
             }

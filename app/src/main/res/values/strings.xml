@@ -9,11 +9,14 @@
     <string name="instruc_login"><b>LOGIN</b>
         \n\n<i>Faça o login clicando no botão abaixo, é rápido e fácil.</i></string>
 
-    <!-- Toast Messages -->
+    <!-- Snackbar Messages -->
     <string name="alcohol_consum_error">Preencha o valor do consumo de etanol por quilometragem!</string>
     <string name="gasoline_consum_error">Preencha o valor do consumo de gasolina por quilometragem!</string>
     <string name="alcohol_price_error">Preencha o preço do litro do etanol!</string>
     <string name="gasoline_price_error">Preencha o preço do litro da gasolina!</string>
+    <string name="google_sign_in_error">Falha ao logar com e-mail Google.</string>
+    <string name="authenticator_failed">Falha ao tentar autenticar.</string>
+    <string name="logout_message">Deslogado com sucesso.</string>
 
     <!-- Alerts Dialogs -->
     <string name="text_yes">Sim</string>
@@ -40,5 +43,5 @@
 
     <!-- Menu -->
     <string name="calc_consumption">Como calcular o consumo?</string>
-    <string name="exit">Sair</string>
+    <string name="logout">Desconectar</string>
 </resources>
