@@ -9,6 +9,9 @@
     <string name="instruc_login"><b>LOGIN</b>
         \n\n<i>Faça o login clicando no botão abaixo, é rápido e fácil.</i></string>
 
+    <!-- Botões -->
+    <string name="button_google">Entrar com Google</string>
+
     <!-- Snackbar Messages -->
     <string name="alcohol_consum_error">Preencha o valor do consumo de etanol por quilometragem!</string>
     <string name="gasoline_consum_error">Preencha o valor do consumo de gasolina por quilometragem!</string>

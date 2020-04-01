@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity() {
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        btGoogleSignIn.setSize(SignInButton.SIZE_WIDE)
         btGoogleSignIn.setOnClickListener {
             signOut()
             signInGoogle()
@@ -64,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                     main_login_layout,
                     R.string.google_sign_in_error,
                     Snackbar.LENGTH_SHORT).show()
+                progressBarLogin.visibility = View.GONE
             }
         }
     }
