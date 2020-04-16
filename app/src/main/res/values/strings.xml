@@ -3,7 +3,8 @@
     <string name="etanol">Etanol</string>
     <string name="gasolina">Gasolina</string>
     <string name="mileage_consumption">Consumo por quilometragem</string>
-    <string name="price">Preço</string>
+    <string name="value_gasoline">Valor do litro de gasolina</string>
+    <string name="value_ethanol">Valor do litro de etanol</string>
     <string name="calculate">Calcular</string>
     <string name="result">Resultado</string>
     <string name="instruc_login"><b>LOGIN</b>
@@ -20,6 +21,9 @@
     <string name="google_sign_in_error">Falha ao logar com e-mail Google.</string>
     <string name="authenticator_failed">Falha ao tentar autenticar.</string>
     <string name="logout_message">Deslogado com sucesso.</string>
+
+    <!-- Toast Messages -->
+    <string name="press_back">Pressione novamente para sair</string>
 
     <!-- Alerts Dialogs -->
     <string name="text_yes">Sim</string>

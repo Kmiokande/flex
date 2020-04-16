@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -15,6 +16,8 @@ import kotlinx.android.synthetic.main.main_activity.*
 
 
 class MainActivity : AppCompatActivity() {
+    private var backPressedTime: Long = 0
+    private var backToast: Toast? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,16 +54,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculate() {
         val duration = Snackbar.LENGTH_LONG
-        if (etEthanolConsumption.text.isEmpty()) {
+        if (etEthanolConsumption.text!!.isEmpty()) {
             Snackbar.make(mainActivityLayout, R.string.alcohol_consum_error, duration).show()
         }
-        else if (etEthanolPrice.text.isEmpty()) {
+        else if (etEthanolPrice.text!!.isEmpty()) {
             Snackbar.make(mainActivityLayout, R.string.alcohol_price_error, duration).show()
         }
-        else if (etGasolineConsumption.text.isEmpty()) {
+        else if (etGasolineConsumption.text!!.isEmpty()) {
             Snackbar.make(mainActivityLayout, R.string.gasoline_consum_error, duration).show()
         }
-        else if (etGasolinePrice.text.isEmpty()) {
+        else if (etGasolinePrice.text!!.isEmpty()) {
             Snackbar.make(mainActivityLayout, R.string.gasoline_price_error, duration).show()
         }
         else {
@@ -106,7 +109,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun howCalculate() {
-        val alertDialog = AlertDialog.Builder(this, R.style.AlertDialogTheme).create()
+        val alertDialog = AlertDialog.Builder(this).create()
         alertDialog.setTitle(getString(R.string.how_calc_consumption))
         alertDialog.setMessage(getString(R.string.how_calc_consumption_info))
         alertDialog.setButton(
@@ -116,14 +119,19 @@ class MainActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
-    private fun exit() {
-        AlertDialog.Builder(this, R.style.AlertDialogTheme)
-            .setMessage(R.string.exit_question).setCancelable(false)
-            .setPositiveButton(R.string.text_yes) { _, _ -> finish() }
-            .setNegativeButton(R.string.text_cancel, null).show()
-    }
-
     override fun onBackPressed() {
-        exit()
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast!!.cancel()
+            super.onBackPressed()
+            return
+        }
+        else {
+            val message = getString(R.string.press_back)
+            backToast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+            backToast!!.show()
+        }
+
+        backPressedTime = System.currentTimeMillis()
+
     }
 }
