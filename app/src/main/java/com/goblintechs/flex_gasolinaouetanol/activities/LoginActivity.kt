@@ -1,14 +1,14 @@
-package com.goblintechs.flex_gasolinaouetanol
+package com.goblintechs.flex_gasolinaouetanol.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.goblintechs.flex_gasolinaouetanol.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -44,7 +44,9 @@ class LoginActivity : AppCompatActivity() {
     private fun signInGoogle() {
         progressBarLogin.visibility = View.VISIBLE
         val signInIntent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, GOOGLE_SIGN)
+        startActivityForResult(signInIntent,
+            GOOGLE_SIGN
+        )
     }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

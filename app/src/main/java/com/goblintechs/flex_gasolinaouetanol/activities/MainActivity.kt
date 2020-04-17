@@ -1,4 +1,4 @@
-package com.goblintechs.flex_gasolinaouetanol
+package com.goblintechs.flex_gasolinaouetanol.activities
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.goblintechs.flex_gasolinaouetanol.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.main_activity.*
@@ -39,10 +40,8 @@ class MainActivity : AppCompatActivity() {
         // Handle presses on the action bar menu items
         when (item.itemId) {
             R.id.action_cars_menu -> {
-                Snackbar.make(
-                    mainActivityLayout,
-                    "Funcionalidade em breve",
-                    Snackbar.LENGTH_LONG).show()
+                val i = Intent(this@MainActivity, CarsActivity::class.java)
+                startActivity(i)
                 return true
             }
             R.id.action_calc_consumption_menu -> {
@@ -156,7 +155,7 @@ class MainActivity : AppCompatActivity() {
         alertDialog.setMessage(getString(R.string.how_calc_consumption_info))
         alertDialog.setButton(
             Dialog.BUTTON_POSITIVE,
-            getString(R.string.text_ok)) {dialogInterface: DialogInterface?, which: Int ->  }
+            getString(R.string.text_ok)) { dialogInterface: DialogInterface?, which: Int ->  }
         //alertDialog.setIcon()
         alertDialog.show()
     }
