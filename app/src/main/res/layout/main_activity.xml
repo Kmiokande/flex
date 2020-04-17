@@ -7,13 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,14 +30,15 @@
             <!--Gasolina-->
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlGasolineConsumption"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mileage_consumption"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
-                app:startIconDrawable="@drawable/ic_local_gas_station_white_24dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                app:startIconDrawable="@drawable/ic_local_gas_station_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etGasolineConsumption"
@@ -41,16 +49,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlGasolinePrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/value_gasoline"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
-                app:startIconDrawable="@drawable/ic_attach_money_white_24dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:helperText="Exemplo: 4.75"
                 app:helperTextEnabled="true"
-                app:helperText="Exemplo: 4.75">
+                app:startIconDrawable="@drawable/ic_attach_money_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etGasolinePrice"
@@ -63,14 +72,15 @@
             <!--Etanol-->
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlEthanolConsumption"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mileage_consumption"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
-                app:startIconDrawable="@drawable/ic_local_gas_station_white_24dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                app:startIconDrawable="@drawable/ic_local_gas_station_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEthanolConsumption"
@@ -81,16 +91,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlEthanolPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/value_ethanol"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
-                app:startIconDrawable="@drawable/ic_attach_money_white_24dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:helperText="Exemplo: 4.00"
                 app:helperTextEnabled="true"
-                app:helperText="Exemplo: 4.00">
+                app:startIconDrawable="@drawable/ic_attach_money_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEthanolPrice"
@@ -104,8 +115,8 @@
                 android:id="@+id/btCalculate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:text="@string/calculate"
                 android:textSize="18sp" />

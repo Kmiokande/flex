@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         btCalculate.setOnClickListener {
             calculate()
@@ -37,6 +38,13 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle presses on the action bar menu items
         when (item.itemId) {
+            R.id.action_cars_menu -> {
+                Snackbar.make(
+                    mainActivityLayout,
+                    "Funcionalidade em breve",
+                    Snackbar.LENGTH_LONG).show()
+                return true
+            }
             R.id.action_calc_consumption_menu -> {
                 howCalculate()
                 return true
@@ -53,26 +61,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculate() {
-        val duration = Snackbar.LENGTH_LONG
-        if (etEthanolConsumption.text!!.isEmpty()) {
-            Snackbar.make(mainActivityLayout, R.string.alcohol_consum_error, duration).show()
-        }
-        else if (etEthanolPrice.text!!.isEmpty()) {
-            Snackbar.make(mainActivityLayout, R.string.alcohol_price_error, duration).show()
-        }
-        else if (etGasolineConsumption.text!!.isEmpty()) {
-            Snackbar.make(mainActivityLayout, R.string.gasoline_consum_error, duration).show()
-        }
-        else if (etGasolinePrice.text!!.isEmpty()) {
-            Snackbar.make(mainActivityLayout, R.string.gasoline_price_error, duration).show()
-        }
-        else {
+        valFields()
+
+        if (etEthanolConsumption.text!!.isNotEmpty() &&
+            etEthanolPrice.text.toString().isNotEmpty() &&
+            etGasolineConsumption.text!!.isNotEmpty() &&
+            etGasolinePrice.text!!.isNotEmpty()) {
             val ethanolConsumption = etEthanolConsumption.text.toString()
             val gasolineConsumption = etGasolineConsumption.text.toString()
             val ethanolPrice = etEthanolPrice.text.toString()
             val gasolinePrice = etGasolinePrice.text.toString()
 
-            calculateBetterPrice(ethanolConsumption, gasolineConsumption, ethanolPrice, gasolinePrice)
+            calculateBetterPrice(
+                ethanolConsumption,
+                gasolineConsumption,
+                ethanolPrice,
+                gasolinePrice
+            )
+        }
+        else {
+            tvResult.visibility = View.INVISIBLE
         }
     }
 
@@ -105,6 +113,40 @@ class MainActivity : AppCompatActivity() {
         else {
             tvResult.visibility = View.VISIBLE
             tvResult.setText("Abasteça com Gasolina!")
+        }
+    }
+
+    private fun valFields() {
+        if (etEthanolConsumption.text!!.isEmpty()) {
+            tlEthanolConsumption.isErrorEnabled = true
+            tlEthanolConsumption.error = getString(R.string.alcohol_consum_error)
+        }
+        else {
+            tlEthanolConsumption.isErrorEnabled = false
+        }
+
+        if (etEthanolPrice.text.toString().isEmpty()) {
+            tlEthanolPrice.isErrorEnabled = true
+            tlEthanolPrice.error = getString(R.string.alcohol_price_error)
+        }
+        else {
+            tlEthanolPrice.isErrorEnabled = false
+        }
+
+        if (etGasolineConsumption.text!!.isEmpty()) {
+            tlGasolineConsumption.isErrorEnabled = true
+            tlGasolineConsumption.error = getString(R.string.gasoline_consum_error)
+        }
+        else {
+            tlGasolineConsumption.isErrorEnabled = false
+        }
+
+        if (etGasolinePrice.text!!.isEmpty()) {
+            tlGasolinePrice.isErrorEnabled = true
+            tlGasolinePrice.error = getString(R.string.gasoline_price_error)
+        }
+        else {
+            tlGasolinePrice.isErrorEnabled = false
         }
     }
 

@@ -7,6 +7,7 @@
     <string name="value_ethanol">Valor do litro de etanol</string>
     <string name="calculate">Calcular</string>
     <string name="result">Resultado</string>
+    <string name="img_desc">Banner</string>
     <string name="instruc_login"><b>LOGIN</b>
         \n\n<i>Faça o login clicando no botão abaixo, é rápido e fácil.</i></string>
 
@@ -49,6 +50,7 @@
         boca no modo manual.</string>
 
     <!-- Menu -->
+    <string name="my_cars">Meus carros</string>
     <string name="calc_consumption">Como calcular o consumo?</string>
     <string name="logout">Desconectar</string>
 </resources>
