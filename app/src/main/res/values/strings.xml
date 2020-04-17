@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Flex - Gasolina ou Etanol</string>
+    <string name="list_cars_toolbar">Meus carros</string>
     <string name="etanol">Etanol</string>
     <string name="gasolina">Gasolina</string>
     <string name="mileage_consumption">Consumo por quilometragem</string>

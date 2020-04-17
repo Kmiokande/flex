@@ -14,6 +14,9 @@ class CarsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cars_activity)
         setSupportActionBar(findViewById(R.id.toolbar))
+        val actionBar = supportActionBar
+        actionBar!!.title = getString(R.string.list_cars_toolbar)
+        actionBar.setDisplayHomeAsUpEnabled(true)
 
         val carsList = generateList()
         recycler.adapter = ListCarAdapter(carsList)
@@ -29,6 +32,69 @@ class CarsActivity : AppCompatActivity() {
             "Consumo de gasolina: 11.3",
             "Consumo de etanol: 9.3")
             )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Honda Civic",
+            "Consumo de gasolina: 14.4",
+            "Consumo de etanol: 10.2")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Chevrolet Celta",
+            "Consumo de gasolina: 12.3",
+            "Consumo de etanol: 9.8")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Fiat Uno",
+            "Consumo de gasolina: 11.3",
+            "Consumo de etanol: 9.3")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Honda Civic",
+            "Consumo de gasolina: 14.4",
+            "Consumo de etanol: 10.2")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Chevrolet Celta",
+            "Consumo de gasolina: 12.3",
+            "Consumo de etanol: 9.8")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Fiat Uno",
+            "Consumo de gasolina: 11.3",
+            "Consumo de etanol: 9.3")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Honda Civic",
+            "Consumo de gasolina: 14.4",
+            "Consumo de etanol: 10.2")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Chevrolet Celta",
+            "Consumo de gasolina: 12.3",
+            "Consumo de etanol: 9.8")
+        )
+
+        list.add(ExampleItem(
+            R.drawable.ic_directions_car_white_24dp,
+            "Fiat Uno",
+            "Consumo de gasolina: 11.3",
+            "Consumo de etanol: 9.3")
+        )
 
         list.add(ExampleItem(
             R.drawable.ic_directions_car_white_24dp,
