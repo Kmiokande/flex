@@ -6,7 +6,6 @@
     <string name="mileage_consumption">Consumo por quilometragem</string>
     <string name="value_gasoline">Valor do litro de gasolina</string>
     <string name="value_ethanol">Valor do litro de etanol</string>
-    <string name="calculate">Calcular</string>
     <string name="result">Resultado</string>
     <string name="img_desc">Banner</string>
     <string name="instruc_login"><b>LOGIN</b>
@@ -14,6 +13,7 @@
 
     <!-- Botões -->
     <string name="button_google">Entrar com Google</string>
+    <string name="calculate">Calcular</string>
 
     <!-- Snackbar Messages -->
     <string name="alcohol_consum_error">Preencha o valor do consumo de etanol por quilometragem</string>

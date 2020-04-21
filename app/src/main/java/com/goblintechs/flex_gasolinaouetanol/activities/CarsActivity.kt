@@ -2,6 +2,7 @@ package com.goblintechs.flex_gasolinaouetanol.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.goblintechs.flex_gasolinaouetanol.R
 import com.goblintechs.flex_gasolinaouetanol.adapters.ListCarAdapter
@@ -13,15 +14,15 @@ class CarsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cars_activity)
-        setSupportActionBar(findViewById(R.id.toolbar))
-        val actionBar = supportActionBar
-        actionBar!!.title = getString(R.string.list_cars_toolbar)
-        actionBar.setDisplayHomeAsUpEnabled(true)
 
         val carsList = generateList()
         recycler.adapter = ListCarAdapter(carsList)
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.setHasFixedSize(true)
+
+        btAddCar.setOnClickListener {
+            Toast.makeText(this, "Função em breve", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun generateList(): List<ExampleItem> {
