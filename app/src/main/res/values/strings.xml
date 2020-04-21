@@ -32,6 +32,7 @@
     <string name="text_no">Não</string>
     <string name="text_ok">OK</string>
     <string name="text_cancel">Cancelar</string>
+    <string name="text_save">Salvar</string>
     <string name="exit_question">Deseja realmente sair?</string>
     <string name="how_calc_consumption">Como calcular o consumo de combustível?</string>
     <string name="how_calc_consumption_info">O primeiro passo para descobrir o quanto seu carro
@@ -49,6 +50,10 @@
         \nAo abastecer o carro para fazer a conta, fique atento ao “clique” da bomba de combustível.
         Ela indica que o tanque já está cheio. Não deixe que o frentista encha o tanque até a
         boca no modo manual.</string>
+    <string name="add_car">Adicionar carro</string>
+    <string name="name_car">Nome do carro</string>
+    <string name="gas_car_consum">Consumo de gasolina por quilometragem</string>
+    <string name="etha_car_consum">Consumo de etanol por quilometragem</string>
 
     <!-- Menu -->
     <string name="my_cars">Meus carros</string>

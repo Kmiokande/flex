@@ -1,13 +1,18 @@
 package com.goblintechs.flex_gasolinaouetanol.activities
 
+import android.app.Dialog
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.goblintechs.flex_gasolinaouetanol.R
 import com.goblintechs.flex_gasolinaouetanol.adapters.ListCarAdapter
 import com.goblintechs.flex_gasolinaouetanol.classes.ExampleItem
 import kotlinx.android.synthetic.main.cars_activity.*
+import kotlinx.android.synthetic.main.dialog_car.view.*
 
 class CarsActivity : AppCompatActivity() {
 
@@ -21,7 +26,14 @@ class CarsActivity : AppCompatActivity() {
         recycler.setHasFixedSize(true)
 
         btAddCar.setOnClickListener {
-            Toast.makeText(this, "Função em breve", Toast.LENGTH_SHORT).show()
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.dialog_car, null)
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+                .setTitle(R.string.add_car)
+            val mAlertDialog = mBuilder.show()
+            mDialogView.btCarCancel.setOnClickListener {
+                mAlertDialog.dismiss()
+            }
         }
     }
 
