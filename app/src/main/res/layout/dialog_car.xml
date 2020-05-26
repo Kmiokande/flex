@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -12,7 +13,9 @@
         android:hint="@string/name_car"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
-        android:paddingRight="16dp">
+        android:paddingRight="16dp"
+        app:helperText="@string/name_car_helper"
+        app:helperTextEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNameCar"
@@ -30,7 +33,9 @@
         android:hint="@string/gas_car_consum"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
-        android:paddingRight="16dp">
+        android:paddingRight="16dp"
+        app:helperText="@string/gasoline_consum_helper"
+        app:helperTextEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etGasCarConsum"
@@ -48,7 +53,9 @@
         android:hint="@string/etha_car_consum"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
-        android:paddingRight="16dp">
+        android:paddingRight="16dp"
+        app:helperText="@string/ethanol_consum_helper"
+        app:helperTextEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEthaCarConsum"

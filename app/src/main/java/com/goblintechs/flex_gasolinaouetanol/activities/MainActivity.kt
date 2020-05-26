@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
     private fun valFields() {
         if (etEthanolConsumption.text!!.isEmpty()) {
             tlEthanolConsumption.isErrorEnabled = true
-            tlEthanolConsumption.error = getString(R.string.alcohol_consum_error)
+            tlEthanolConsumption.error = getString(R.string.ethanol_consum_error)
         }
         else {
             tlEthanolConsumption.isErrorEnabled = false
@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
 
         if (etEthanolPrice.text.toString().isEmpty()) {
             tlEthanolPrice.isErrorEnabled = true
-            tlEthanolPrice.error = getString(R.string.alcohol_price_error)
+            tlEthanolPrice.error = getString(R.string.ethanol_price_error)
         }
         else {
             tlEthanolPrice.isErrorEnabled = false

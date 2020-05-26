@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "238637801068-6p9u5eq6nt32ed7do9fsuv1f9sp192f9.apps.googleusercontent.com",
+          "client_id": "238637801068-e1nvq97qekf6ffnaocrn6lsq7lfm5pk0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.goblintechs.flex_gasolinaouetanol",
-            "certificate_hash": "a7a8a5d5a78c4c49c56215b031db58aeb306afc8"
+            "certificate_hash": "9281d08db3356f20e3fd735d5474e57c70f9a668"
           }
         },
         {

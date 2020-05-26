@@ -16,16 +16,25 @@
     <string name="calculate">Calcular</string>
 
     <!-- Snackbar Messages -->
-    <string name="alcohol_consum_error">Preencha o valor do consumo de etanol por quilometragem</string>
-    <string name="gasoline_consum_error">Preencha o valor do consumo de gasolina por quilometragem</string>
-    <string name="alcohol_price_error">Preencha o valor do litro de etanol</string>
-    <string name="gasoline_price_error">Preencha o valor do litro de gasolina</string>
+
     <string name="google_sign_in_error">Falha ao logar com e-mail Google.</string>
     <string name="authenticator_failed">Falha ao tentar autenticar.</string>
     <string name="logout_message">Deslogado com sucesso.</string>
 
     <!-- Toast Messages -->
     <string name="press_back">Pressione novamente para sair</string>
+
+    <!-- TextInputLayout Error -->
+    <string name="ethanol_consum_error">Preencha o valor do consumo de etanol por quilometragem</string>
+    <string name="gasoline_consum_error">Preencha o valor do consumo de gasolina por quilometragem</string>
+    <string name="ethanol_price_error">Preencha o valor do litro de etanol</string>
+    <string name="gasoline_price_error">Preencha o valor do litro de gasolina</string>
+    <string name="name_car_error">Preencha o nome do carro</string>
+
+    <!-- Helper Text -->
+    <string name="name_car_helper">Exemplo: Honda Civic</string>
+    <string name="gasoline_consum_helper">Exemplo: 10.5</string>
+    <string name="ethanol_consum_helper">Exemplo: 7.3</string>
 
     <!-- Alerts Dialogs -->
     <string name="text_yes">Sim</string>
