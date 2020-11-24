@@ -39,22 +39,22 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle presses on the action bar menu items
         when (item.itemId) {
-            R.id.action_cars_menu -> {
+            /*R.id.action_cars_menu -> {
                 val i = Intent(this@MainActivity, CarsActivity::class.java)
                 startActivity(i)
                 return true
-            }
+            }*/
             R.id.action_calc_consumption_menu -> {
                 howCalculate()
                 return true
             }
-            R.id.action_exit_menu -> {
+            /*R.id.action_exit_menu -> {
                 FirebaseAuth.getInstance().signOut()
                 val i = Intent(this@MainActivity, LoginActivity::class.java)
                 startActivity(i)
                 finish()
                 return true
-            }
+            }*/
         }
         return super.onOptionsItemSelected(item)
     }

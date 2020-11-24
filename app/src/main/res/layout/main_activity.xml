@@ -27,12 +27,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
 
             <!--Gasolina-->
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:text="@string/gasolina"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tlGasolineConsumption"
@@ -43,6 +49,8 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
+                app:helperText="Exemplo: 15.0"
+                app:helperTextEnabled="true"
                 app:startIconDrawable="@drawable/ic_local_gas_station_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -76,6 +84,16 @@
 
             <!--Etanol-->
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:text="@string/etanol"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tlEthanolConsumption"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -85,6 +103,8 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
+                app:helperText="Exemplo: 13.4"
+                app:helperTextEnabled="true"
                 app:startIconDrawable="@drawable/ic_local_gas_station_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText

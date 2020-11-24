@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     fun mainScreen() {
-        val i = Intent(this@SplashActivity, LoginActivity::class.java)
+        val i = Intent(this@SplashActivity, MainActivity::class.java)
         startActivity(i)
         finish()
     }
