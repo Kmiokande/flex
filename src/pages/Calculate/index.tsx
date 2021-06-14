@@ -1,10 +1,10 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
 const Calculate: React.FC = () => {
   return (
@@ -13,6 +13,10 @@ const Calculate: React.FC = () => {
       contentContainerStyle={{ flex: 1 }}
     >
       <Container>
+        <View>
+          <Title>Gasolina</Title>
+        </View>
+
         <Input
           name="gasCash"
           icon="cash-multiple"
@@ -23,6 +27,23 @@ const Calculate: React.FC = () => {
           name="gasMileage"
           icon="fuel"
           placeholder="Quilometragem com gasolina"
+          keyboardType="decimal-pad"
+        />
+
+        <View>
+          <Title>Etanol</Title>
+        </View>
+
+        <Input
+          name="ethCash"
+          icon="cash-multiple"
+          placeholder="Valor do litro de etanol"
+          keyboardType="decimal-pad"
+        />
+        <Input
+          name="ethMileage"
+          icon="fuel"
+          placeholder="Quilometragem com etanol"
           keyboardType="decimal-pad"
         />
 
