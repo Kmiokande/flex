@@ -1,6 +1,8 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 
+import Input from '../../components/Input';
+
 import { Container } from './styles';
 
 const Calculate: React.FC = () => {
@@ -9,7 +11,18 @@ const Calculate: React.FC = () => {
       keyboardShouldPersistTaps="handled"
       contentContainerStyle={{ flex: 1 }}
     >
-      <Container />
+      <Container>
+        <Input
+          name="gasCash"
+          icon="cash-multiple"
+          placeholder="Valor do litro de gasolina"
+        />
+        <Input
+          name="gasMileage"
+          icon="fuel"
+          placeholder="Quilometragem com gasolina"
+        />
+      </Container>
     </ScrollView>
   );
 };
