@@ -16,11 +16,13 @@ const Calculate: React.FC = () => {
           name="gasCash"
           icon="cash-multiple"
           placeholder="Valor do litro de gasolina"
+          keyboardType="decimal-pad"
         />
         <Input
           name="gasMileage"
           icon="fuel"
           placeholder="Quilometragem com gasolina"
+          keyboardType="decimal-pad"
         />
       </Container>
     </ScrollView>
