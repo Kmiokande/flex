@@ -1,54 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
+import { TextInput } from 'react-native-paper';
 
-import Input from '../../components/Input';
-import Button from '../../components/Button';
-
-import { Container, Title } from './styles';
+const styles = {
+  input: {
+    marginLeft: 16,
+    marginRight: 16,
+    marginBottom: 8,
+  },
+};
 
 const Calculate: React.FC = () => {
+  const [text, setText] = useState('');
+
   return (
     <ScrollView
       keyboardShouldPersistTaps="handled"
       contentContainerStyle={{ flex: 1 }}
     >
-      <Container>
-        <View>
-          <Title>Gasolina</Title>
-        </View>
-
-        <Input
-          name="gasCash"
-          icon="cash-multiple"
-          placeholder="Valor do litro de gasolina"
-          keyboardType="decimal-pad"
+      <View style={{ flex: 1, justifyContent: 'center' }}>
+        <TextInput
+          left={<TextInput.Icon name="fuel" />}
+          style={styles.input}
+          mode="outlined"
+          label="Consumo por quilometragem"
+          value={text}
+          onChangeText={(text) => setText(text)}
         />
-        <Input
-          name="gasMileage"
-          icon="fuel"
-          placeholder="Quilometragem com gasolina"
-          keyboardType="decimal-pad"
-        />
-
-        <View>
-          <Title>Etanol</Title>
-        </View>
-
-        <Input
-          name="ethCash"
-          icon="cash-multiple"
-          placeholder="Valor do litro de etanol"
-          keyboardType="decimal-pad"
-        />
-        <Input
-          name="ethMileage"
-          icon="fuel"
-          placeholder="Quilometragem com etanol"
-          keyboardType="decimal-pad"
+        <TextInput
+          left={<TextInput.Icon name="cash-multiple" />}
+          style={styles.input}
+          mode="outlined"
+          label="Valor do litro de gasolina"
+          value={text}
+          onChangeText={(text) => setText(text)}
         />
 
-        <Button onPress={() => {}}>Calcular</Button>
-      </Container>
+        <TextInput
+          left={<TextInput.Icon name="fuel" />}
+          style={styles.input}
+          mode="outlined"
+          label="Consumo por quilometragem"
+          value={text}
+          onChangeText={(text) => setText(text)}
+        />
+        <TextInput
+          left={<TextInput.Icon name="cash-multiple" />}
+          style={styles.input}
+          mode="outlined"
+          label="Valor do litro de etanol"
+          value={text}
+          onChangeText={(text) => setText(text)}
+        />
+      </View>
     </ScrollView>
   );
 };
