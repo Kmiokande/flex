@@ -49,8 +49,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   button: {
-    height: 50,
-    justifyContent: 'center',
     marginBottom: 8,
   },
 });
